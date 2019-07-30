@@ -12,7 +12,6 @@ const cors = require('cors')
 
 // Attach listeners to events by Slack Event "type". See: https://api.slack.com/events/message.im
 slackEvents.on('message', (event) => {
-	console.log(event);
 	if(!event.thread_ts || event.bot_id) return
 	io.to(event.thread_ts).emit('message', event.text)
 });
