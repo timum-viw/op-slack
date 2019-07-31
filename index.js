@@ -44,7 +44,7 @@ io.on('connection', function(socket){
 				if(!data.ts) {
 					socket.emit('ts', result.ts) 
 					socket.join(result.ts)
-					socket.emit('message', 'Vielen Dank für dein Feedback. Du kannst uns gerne weiter schreiben, wenn dir noch etwas auffällt!!')
+					socket.emit('message', 'Vielen Dank für dein Feedback. Schreib uns gerne weiter, wenn dir noch etwas auffällt.')
 				}
 			})
 			.catch( err => console.error(err) )
